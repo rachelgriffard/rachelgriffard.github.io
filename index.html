@@ -6,6 +6,10 @@
     <title>Rachel Griffard-Smith's Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Bedfort&family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
     <style>
         /* Basic reset */
@@ -20,9 +24,9 @@
 
         body {
             background-color: #F8F5F2; /* Off-White Cream */
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Onest", sans-serif;
             line-height: 1.6;
-            color: #0B3D91; /* Deep Navy Blue for all default text */
+            color: #685044; /* Deep Navy Blue for all default text */
             display: flex;
             align-items: flex-start;
             padding: 20px;
@@ -39,7 +43,7 @@
         .sidebar {
             width: 320px;
             padding: 30px; /* Increased padding */
-            background-color: #0B3D91; /* Deep Navy Blue sidebar */
+            background-color: #685044; /* Deep Navy Blue sidebar */
             color: #F8F5F2; /* Off-White Cream text on sidebar */
             border-radius: 12px; /* More rounded corners */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
@@ -48,18 +52,18 @@
             align-items: flex-start; /* Align items to the left */
         }
 
-        /* Headings use Fredoka One (funky retro) */
         .sidebar h1 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 2.5em; /* Slightly larger */
+            font-family: 'Mr Bedfort', cursive; /* Changed from Fredoka One */
+            font-size: 2.8em; /* Slightly larger for Uncial Antiqua */
             margin-bottom: 0.5em;
-            color: #F2C94C; /* Warm Mustard Yellow */
-            font-weight: normal;
-            letter-spacing: 0.5px; /* Subtle letter spacing */
+            color: #F9DEC9; /* Warm Mustard Yellow */
+            font-weight: normal; /* Uncial Antiqua typically doesn't have multiple weights */
+            letter-spacing: 1px; /* Adjust spacing to suit the new font */
+            line-height: 1.1; /* Adjust line height if name is multi-line */
         }
 
         .sidebar h2 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: "Onest", sans-serif;
             font-size: 1.1em; /* Slightly larger */
             margin-bottom: 1.5em;
             font-weight: 400; /* Less bold */
@@ -83,7 +87,7 @@
         }
 
         .sidebar nav ul li a {
-            color: #F2C94C; /* Warm Mustard Yellow */
+            color: #7A9E7E; /* Warm Mustard Yellow */
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease, transform 0.3s ease; /* Using transform for smoother hover */
@@ -97,7 +101,7 @@
         }
 
         .sidebar nav ul li a:hover {
-            color: #FF6F61; /* Coral Pink on hover (retained for sidebar links) */
+            color: #4A7B9D; /* Coral Pink on hover (retained for sidebar links) */
             transform: translateX(5px); /* Slide slightly on hover */
         }
 
@@ -108,20 +112,20 @@
             border-radius: 12px; /* More rounded corners */
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
             font-family: 'Montserrat', sans-serif;
-            color: #0B3D91; /* Deep Navy Blue text */
+            color: #685044; /* Deep Navy Blue text */
         }
 
         .content a {
-            color: #0B3D91; /* Default Deep Navy Blue for links */
+            color: #685044;
             text-decoration: none;
             font-weight: 700;
-            transition: color 0.3s ease, transform 0.2s ease; /* Faster transform */
+            transition: color 0.3s ease, transform 0.2s ease; 
             display: inline-block;
         }
 
         .content a:hover {
-            color: #F2C94C; /* Warm Mustard Yellow on hover */
-            transform: scale(1.03); /* Subtle scale */
+            color: #4A7B9D;
+            transform: scale(1.03);
             cursor: pointer;
         }
 
@@ -175,7 +179,7 @@
         }
 
         main a {
-            color: #0B3D91; /* Default Deep Navy Blue for main content links */
+            color: #685044; /* Default Deep Navy Blue for main content links */
             text-decoration: none;
             font-weight: 700;
             transition: color 0.3s ease, transform 0.2s ease;
@@ -183,7 +187,7 @@
         }
 
         main a:hover {
-            color: #F2C94C; /* Warm Mustard Yellow on hover */
+            color: #F9DEC9; /* Warm Mustard Yellow on hover */
             transform: scale(1.03);
             cursor: pointer;
         }
@@ -197,7 +201,7 @@
         }
 
         .intro-text, .follow-up-text {
-            color: #0B3D91; /* Deep Navy Blue */
+            color: #685044; /* Deep Navy Blue */
             text-align: center;
         }
 
@@ -243,7 +247,7 @@
                 padding: 20px;
             }
             .sidebar h1 {
-                font-size: 2.2em;
+                font-size: 2.5em; /* Adjusted for smaller screens */
             }
             .sidebar h2 {
                 font-size: 1em;
