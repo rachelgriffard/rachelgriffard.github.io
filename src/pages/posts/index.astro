@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Posts | Rachel Griffard-Smith"
+  description="Thoughts on bioinformatics, learning, and everything in between."
+>
+  <div class="container">
+    <div class="page-title">
+      <h1>Posts</h1>
+      <p>Thoughts on bioinformatics, learning, and everything in between.</p>
+    </div>
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </div>
+</BaseLayout>

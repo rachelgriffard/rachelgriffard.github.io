@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p public/images public/css)",
+      "Bash(cp images/penny.jpg images/duchess.jpg images/hobbes.jpg images/climbing.gif.gif public/images/)",
+      "Bash(cp \"images/rachel-and-jack.JPG\" public/images/)",
+      "Bash(cp css/styles.css public/css/styles.css)"
+    ]
+  }
+}
