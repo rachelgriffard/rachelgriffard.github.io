@@ -1,7 +1,7 @@
 /* ===============================
    FONTS
    =============================== */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap');
 
 /* ===============================
    RESET & VARIABLES
@@ -13,23 +13,23 @@
 }
 
 :root {
-  --bg:          #f5faf6;
+  --bg:          #f7f4f0;
   --bg-card:     #ffffff;
-  --bg-mist:     #eaf4ea;
-  --green-900:   #1a3b1e;
-  --green-700:   #2b5d34;
-  --green-500:   #4a7c59;
-  --green-300:   #8ab89a;
-  --green-100:   #d4e9d8;
-  --green-50:    #edf7ef;
-  --text-dark:   #1a2b1c;
-  --text-body:   #3a4d3a;
-  --text-muted:  #6b8870;
-  --text-light:  #9cb09c;
-  --border:      #c5dcc5;
-  --shadow-sm:   0 2px 8px rgba(30,70,32,0.07);
-  --shadow-md:   0 4px 16px rgba(30,70,32,0.11);
-  --shadow-lg:   0 8px 32px rgba(30,70,32,0.15);
+  --bg-mist:     #f0ece6;
+  --green-900:   #3a5566;
+  --green-700:   #628395;
+  --green-500:   #CF995F;
+  --green-300:   #DBAD6A;
+  --green-100:   #f0e4cc;
+  --green-50:    #f9f4ed;
+  --text-dark:   #2c3b47;
+  --text-body:   #4a4239;
+  --text-muted:  #96897B;
+  --text-light:  #b8afa5;
+  --border:      #d5cabb;
+  --shadow-sm:   0 2px 8px rgba(98,131,149,0.08);
+  --shadow-md:   0 4px 16px rgba(98,131,149,0.13);
+  --shadow-lg:   0 8px 32px rgba(98,131,149,0.18);
   --radius:      10px;
   --radius-lg:   16px;
   --ease:        0.2s ease;
@@ -43,7 +43,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-body);
@@ -83,7 +83,7 @@ ul {
    STICKY NAVIGATION
    =============================== */
 .site-nav {
-  background: rgba(255,255,255,0.95);
+  background: rgba(247,244,240,0.96);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -103,7 +103,7 @@ ul {
 }
 
 .nav-brand {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Henny Penny', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--green-900);
@@ -112,6 +112,38 @@ ul {
 
 .nav-brand:hover {
   color: var(--green-700);
+}
+
+.page-contact-bar {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.6rem 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-contact-icons {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.page-contact-icons a {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  transition: transform var(--ease), opacity var(--ease);
+}
+
+.page-contact-icons a:hover {
+  transform: translateY(-2px);
+  opacity: 0.7;
+}
+
+.page-contact-icons svg {
+  width: 16px;
+  height: 16px;
+  display: block;
 }
 
 .nav-links {
@@ -157,7 +189,7 @@ ul {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Henny Penny', Georgia, serif;
   font-size: 2.9rem;
   font-weight: 700;
   color: var(--green-900);
@@ -246,7 +278,7 @@ ul {
 }
 
 .section-header h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.65rem;
   font-weight: 700;
   color: var(--green-900);
@@ -275,7 +307,7 @@ ul {
 }
 
 .page-title h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 2.25rem;
   color: var(--green-900);
   letter-spacing: -0.02em;
@@ -323,7 +355,7 @@ ul {
 }
 
 .post-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.2rem;
   color: var(--green-900);
   margin-bottom: 0.75rem;
@@ -397,7 +429,7 @@ ul {
 .pub-status.in-prep    { background: #f0e6ff; color: #4b2e83; }
 
 .pub-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.1rem;
   color: var(--green-900);
   margin-bottom: 0.4rem;
@@ -484,6 +516,129 @@ ul {
 /* ===============================
    ABOUT PAGE
    =============================== */
+.about-hero {
+  text-align: center;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.about-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--green-100);
+  box-shadow: var(--shadow-md);
+  margin: 0 auto 1.25rem;
+}
+
+.about-name {
+  font-family: 'Henny Penny', Georgia, serif;
+  font-size: 2rem;
+  color: var(--green-900);
+  margin-bottom: 0.3rem;
+}
+
+.about-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+.about-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-icons a {
+  display: flex;
+  align-items: center;
+  transition: transform var(--ease), opacity var(--ease);
+}
+
+.about-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.75;
+}
+
+.about-icons svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.about-bio-text {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-bio-text p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-gallery-section {
+  padding: 3rem 0 4rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+.about-gallery-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--green-900);
+  margin-bottom: 0.4rem;
+}
+
+.about-gallery-divider {
+  width: 36px;
+  height: 3px;
+  background: var(--green-300);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.about-photo-group {
+  margin-bottom: 2.5rem;
+}
+
+.about-photo-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.about-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-photo-single {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+
+.about-photo-single:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
 .about-bio {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -534,7 +689,7 @@ ul {
 }
 
 .about-content h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin-bottom: 0.75rem;
@@ -553,7 +708,7 @@ ul {
 }
 
 .gallery h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin-bottom: 0.4rem;
@@ -624,7 +779,7 @@ ul {
 }
 
 .cv-sidebar h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.2rem;
   color: var(--green-900);
   margin-bottom: 0.2rem;
@@ -671,6 +826,36 @@ ul {
   padding-left: 0.4rem;
 }
 
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.contact-icons a {
+  padding: 0;
+  border-radius: 6px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--ease), opacity var(--ease);
+}
+
+.contact-icons a:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+  background: transparent;
+  padding-left: 0;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
 .cv-sidebar-section a img {
   width: 16px;
   height: 16px;
@@ -715,7 +900,7 @@ ul {
 }
 
 .cv-entry h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.1rem;
   color: var(--green-900);
   margin-bottom: 0.15rem;
@@ -801,7 +986,7 @@ ul {
 }
 
 .post-header h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 2.25rem;
   color: var(--green-900);
   letter-spacing: -0.02em;
@@ -819,7 +1004,7 @@ ul {
 }
 
 .post-body h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin: 2rem 0 0.75rem;
@@ -861,7 +1046,7 @@ ul {
 }
 
 .footer-brand {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Lora', Georgia, serif;
   font-size: 0.95rem;
   color: var(--text-muted);
 }
