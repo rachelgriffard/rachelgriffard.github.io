@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.crossref.org/works/10.1111/all.70079\")",
+      "Bash(curl -s \"https://api.crossref.org/works/10.1016/j.celrep.2025.116177\")",
+      "Bash(curl -s \"https://api.crossref.org/works/10.1093/bioinformatics/btad611\")"
+    ]
+  }
+}

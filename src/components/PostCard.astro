@@ -18,5 +18,5 @@ const formattedDate = date.toLocaleDateString('en-US', {
   <p class="post-date">{formattedDate}</p>
   <h3>{title}</h3>
   {description && <p>{description}</p>}
-  <a href={`/posts/${post.slug}`} class="read-more">Read more &rarr;</a>
+  <a href={`/posts/${post.id.replace(/\.mdx?$/, '')}`} class="read-more">Read more &rarr;</a>
 </article>
