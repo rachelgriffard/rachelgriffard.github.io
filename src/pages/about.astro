@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About | Rachel Griffard-Smith"
+  description="About Rachel Griffard-Smith — bioinformatician, artist, and nature lover."
+>
+  <div class="container">
+    <div class="page-title">
+      <h1>About Me</h1>
+    </div>
+
+    <div class="about-bio">
+      <aside class="about-aside">
+        <img
+          src="https://github.com/rachelgriffard/digital-cv/assets/95938614/787b7baf-c4f6-48bc-9b11-18b10ea2bbe5"
+          alt="Rachel Griffard-Smith"
+          class="avatar"
+        />
+        <div class="sidebar-links">
+          <a href="mailto:rachelgriffard@gmail.com">&#9993; Email</a>
+          <a
+            href="https://www.linkedin.com/in/rachelgriffard"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+          <a
+            href="https://github.com/rachelgriffard"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub</a>
+          <a
+            href="https://orcid.org/0000-0002-3330-695X"
+            target="_blank"
+            rel="noopener noreferrer"
+          >ORCID</a>
+        </div>
+      </aside>
+
+      <div class="about-content">
+        <h2>Hello!</h2>
+        <p>
+          I'm Rachel Griffard-Smith — a bioinformatician, artist, and nature
+          lover. When I'm not decoding biology with code and stats, I'm
+          capturing moments through photography, crafting collages, or scaling
+          rock walls.
+        </p>
+        <p>
+          I work as a Bioinformatician at the University of Kansas Medical
+          Center, where I build pipelines for RNA sequencing analysis and
+          contribute to published research in bioinformatics.
+        </p>
+      </div>
+    </div>
+
+    <section class="section gallery">
+      <h2>My Dogs</h2>
+      <div class="gallery-divider"></div>
+      <div class="photo-grid">
+        <img src="/images/penny.jpg" alt="Penny Lane" />
+        <img src="/images/duchess.jpg" alt="Duchess" />
+        <img src="/images/hobbes.jpg" alt="Hobbes" />
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <h2>Us Together</h2>
+      <div class="gallery-divider"></div>
+      <div class="photo-single">
+        <img src="/images/rachel-and-jack.JPG" alt="Rachel and Jack" />
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <h2>Rock Climbing</h2>
+      <div class="gallery-divider"></div>
+      <div class="photo-single">
+        <img src="/images/climbing.gif.gif" alt="Rachel rock climbing" />
+      </div>
+    </section>
+  </div>
+</BaseLayout>

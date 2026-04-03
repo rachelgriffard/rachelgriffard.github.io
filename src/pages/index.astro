@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Rachel Griffard-Smith | Blog">
+  <div class="container">
+    <section class="hero">
+      <h1>Rachel Griffard-Smith</h1>
+      <p class="tagline">Framed in code and color</p>
+      <p class="bio-short">
+        Bioinformatician at the University of Kansas Medical Center. Lover of
+        collage, photography, and climbing big rocks.
+      </p>
+      <div class="hero-links">
+        <a href="/posts" class="btn btn-primary">Read Posts</a>
+        <a href="/about" class="btn btn-outline">About Me</a>
+        <a href="/cv" class="btn btn-outline">CV</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Latest Posts</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="post-grid">
+        {posts.slice(0, 6).map((post) => <PostCard post={post} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
