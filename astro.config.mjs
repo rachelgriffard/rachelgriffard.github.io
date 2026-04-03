@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://rachelgriffard.vercel.app',
+  site: 'https://rachelgriffard.github.io',
   integrations: [mdx()],
 });
