@@ -1,7 +1,7 @@
 /* ===============================
    FONTS
    =============================== */
-@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;600;700&family=Inter:wght@400;500&display=swap');
 
 /* ===============================
    RESET & VARIABLES
@@ -13,23 +13,30 @@
 }
 
 :root {
-  --bg:          #f7f4f0;
+  /* Palette: Alabaster Grey / Midnight Violet / Black Cherry / Charcoal / Grey Olive */
+  --alabaster-grey:    #dce0d9;
+  --midnight-violet:   #31081f;
+  --black-cherry:      #6b0f1a;
+  --charcoal:          #595959;
+  --grey-olive:        #808f85;
+
+  --bg:          #f2f0ee;
   --bg-card:     #ffffff;
-  --bg-mist:     #f0ece6;
-  --green-900:   #3a5566;
-  --green-700:   #628395;
-  --green-500:   #CF995F;
-  --green-300:   #DBAD6A;
-  --green-100:   #f0e4cc;
-  --green-50:    #f9f4ed;
-  --text-dark:   #2c3b47;
-  --text-body:   #4a4239;
-  --text-muted:  #96897B;
-  --text-light:  #b8afa5;
-  --border:      #d5cabb;
-  --shadow-sm:   0 2px 8px rgba(98,131,149,0.08);
-  --shadow-md:   0 4px 16px rgba(98,131,149,0.13);
-  --shadow-lg:   0 8px 32px rgba(98,131,149,0.18);
+  --bg-mist:     #dce0d9;
+  --green-900:   #31081f;   /* midnight-violet */
+  --green-700:   #6b0f1a;   /* black-cherry */
+  --green-500:   #808f85;   /* grey-olive */
+  --green-300:   #a8b5ad;   /* light grey-olive */
+  --green-100:   #dce0d9;   /* alabaster-grey */
+  --green-50:    #eceeed;   /* pale alabaster */
+  --text-dark:   #31081f;   /* midnight-violet */
+  --text-body:   #595959;   /* charcoal */
+  --text-muted:  #808f85;   /* grey-olive */
+  --text-light:  #a8b5ad;   /* light grey-olive */
+  --border:      #dce0d9;   /* alabaster-grey */
+  --shadow-sm:   0 2px 8px rgba(49,8,31,0.07);
+  --shadow-md:   0 4px 16px rgba(49,8,31,0.11);
+  --shadow-lg:   0 8px 32px rgba(49,8,31,0.15);
   --radius:      10px;
   --radius-lg:   16px;
   --ease:        0.2s ease;
@@ -43,7 +50,7 @@ html {
 }
 
 body {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-body);
@@ -83,7 +90,7 @@ ul {
    STICKY NAVIGATION
    =============================== */
 .site-nav {
-  background: rgba(247,244,240,0.96);
+  background: rgba(242,240,238,0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -103,7 +110,9 @@ ul {
 }
 
 .nav-brand {
-  font-family: 'Henny Penny', Georgia, serif;
+  display: flex;
+  align-items: center;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--green-900);
@@ -112,38 +121,6 @@ ul {
 
 .nav-brand:hover {
   color: var(--green-700);
-}
-
-.page-contact-bar {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0.6rem 2rem 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.page-contact-icons {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.page-contact-icons a {
-  display: flex;
-  align-items: center;
-  color: var(--text-muted);
-  transition: transform var(--ease), opacity var(--ease);
-}
-
-.page-contact-icons a:hover {
-  transform: translateY(-2px);
-  opacity: 0.7;
-}
-
-.page-contact-icons svg {
-  width: 16px;
-  height: 16px;
-  display: block;
 }
 
 .nav-links {
@@ -189,7 +166,7 @@ ul {
 }
 
 .hero h1 {
-  font-family: 'Henny Penny', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.9rem;
   font-weight: 700;
   color: var(--green-900);
@@ -278,7 +255,7 @@ ul {
 }
 
 .section-header h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.65rem;
   font-weight: 700;
   color: var(--green-900);
@@ -307,7 +284,7 @@ ul {
 }
 
 .page-title h1 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.25rem;
   color: var(--green-900);
   letter-spacing: -0.02em;
@@ -355,7 +332,7 @@ ul {
 }
 
 .post-card h3 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.2rem;
   color: var(--green-900);
   margin-bottom: 0.75rem;
@@ -429,7 +406,7 @@ ul {
 .pub-status.in-prep    { background: #f0e6ff; color: #4b2e83; }
 
 .pub-card h3 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   color: var(--green-900);
   margin-bottom: 0.4rem;
@@ -519,11 +496,13 @@ ul {
 .about-hero {
   text-align: center;
   padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
 }
 
 .about-avatar {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--green-100);
@@ -532,48 +511,51 @@ ul {
 }
 
 .about-name {
-  font-family: 'Henny Penny', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2rem;
+  font-weight: 700;
   color: var(--green-900);
-  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
 }
 
 .about-role {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.875rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-style: italic;
   margin-bottom: 1.25rem;
 }
 
 .about-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .about-icons a {
   display: flex;
   align-items: center;
-  transition: transform var(--ease), opacity var(--ease);
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 6px;
+  transition: background var(--ease);
 }
 
 .about-icons a:hover {
-  transform: translateY(-3px);
-  opacity: 0.75;
+  background: var(--bg-mist);
 }
 
 .about-icons svg {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
+  fill: var(--text-muted);
   display: block;
 }
 
 .about-bio-text {
-  max-width: 620px;
+  max-width: 580px;
   margin: 0 auto;
   text-align: left;
 }
@@ -581,18 +563,16 @@ ul {
 .about-bio-text p {
   font-size: 1.05rem;
   color: var(--text-body);
-  line-height: 1.8;
+  line-height: 1.75;
   margin-bottom: 1rem;
 }
 
 .about-gallery-section {
-  padding: 3rem 0 4rem;
-  border-top: 1px solid var(--border);
-  margin-top: 2rem;
+  padding-bottom: 4rem;
 }
 
 .about-gallery-title {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin-bottom: 0.4rem;
@@ -603,16 +583,16 @@ ul {
   height: 3px;
   background: var(--green-300);
   border-radius: 2px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .about-photo-group {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .about-photo-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -632,13 +612,9 @@ ul {
   box-shadow: var(--shadow-sm);
   object-fit: cover;
   aspect-ratio: 4/3;
-  transition: transform var(--ease), box-shadow var(--ease);
 }
 
-.about-photo-single:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-md);
-}
+/* Legacy about layout (kept for compatibility) */
 .about-bio {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -689,7 +665,7 @@ ul {
 }
 
 .about-content h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin-bottom: 0.75rem;
@@ -708,7 +684,7 @@ ul {
 }
 
 .gallery h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin-bottom: 0.4rem;
@@ -779,7 +755,7 @@ ul {
 }
 
 .cv-sidebar h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.2rem;
   color: var(--green-900);
   margin-bottom: 0.2rem;
@@ -826,41 +802,38 @@ ul {
   padding-left: 0.4rem;
 }
 
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem 0;
-}
-
-.contact-icons a {
-  padding: 0;
-  border-radius: 6px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--ease), opacity var(--ease);
-}
-
-.contact-icons a:hover {
-  transform: translateY(-3px);
-  opacity: 0.8;
-  background: transparent;
-  padding-left: 0;
-}
-
-.contact-icon {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-
 .cv-sidebar-section a img {
   width: 16px;
   height: 16px;
   object-fit: contain;
   display: inline;
+}
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: var(--text-body);
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: 6px;
+  transition: background var(--ease);
+}
+
+.contact-icons a:hover {
+  background: var(--green-100);
 }
 
 .cv-main {
@@ -900,7 +873,7 @@ ul {
 }
 
 .cv-entry h3 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   color: var(--green-900);
   margin-bottom: 0.15rem;
@@ -986,7 +959,7 @@ ul {
 }
 
 .post-header h1 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.25rem;
   color: var(--green-900);
   letter-spacing: -0.02em;
@@ -1004,7 +977,7 @@ ul {
 }
 
 .post-body h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.5rem;
   color: var(--green-900);
   margin: 2rem 0 0.75rem;
@@ -1023,6 +996,43 @@ ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+/* ===============================
+   PAGE CONTACT BAR
+   =============================== */
+.page-contact-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-contact-icons {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.page-contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: background var(--ease);
+}
+
+.page-contact-icons a:hover {
+  background: var(--bg-mist);
+}
+
+.page-contact-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-muted);
+  display: block;
 }
 
 /* ===============================
@@ -1046,7 +1056,7 @@ ul {
 }
 
 .footer-brand {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 0.95rem;
   color: var(--text-muted);
 }
@@ -1069,6 +1079,33 @@ ul {
 
 .footer-nav a:hover {
   color: var(--green-700);
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: background var(--ease);
+}
+
+.footer-social a:hover {
+  background: var(--bg-mist);
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-muted);
+  display: block;
 }
 
 .footer-copy {
@@ -1101,6 +1138,10 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-photo-row {
+    grid-template-columns: 1fr;
   }
 }
 
