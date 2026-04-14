@@ -19,47 +19,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="cv-role">Bioinformatician</p>
 
         <div class="cv-sidebar-section">
-          <h3>Contact</h3>
-          <a href="mailto:rachelgriffard@gmail.com">
-            &#9993; rachelgriffard@gmail.com
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rachelgriffard"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            in LinkedIn
-          </a>
-          <a
-            href="https://orcid.org/0000-0002-3330-695X"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ORCID 0000-0002-3330-695X
-          </a>
-          <a
-            href="https://github.com/rachelgriffard"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &#9675; GitHub
-          </a>
-        </div>
-
-        <div class="cv-sidebar-section">
-          <h3>Skills</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Unix</span>
-            <span class="skill-tag">Markdown</span>
-            <span class="skill-tag">scRNA-seq</span>
-            <span class="skill-tag">Bulk RNA-seq</span>
-            <span class="skill-tag">Bioinformatics</span>
-            <span class="skill-tag">Statistics</span>
+          <div class="contact-icons">
+            <a href="mailto:rachelgriffard@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rachelgriffard" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/>
+              </svg>
+            </a>
+            <a href="https://orcid.org/0000-0002-3330-695X" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+              <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
+                <path d="M256 128c0 70.7-57.3 128-128 128C57.3 256 0 198.7 0 128 0 57.3 57.3 0 128 0c70.7 0 128 57.3 128 128z" fill="#A6CE39"/>
+                <path d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 152 93h-27.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.5 10.1 10.1z" fill="#fff"/>
+              </svg>
+            </a>
+            <a href="https://github.com/rachelgriffard" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="contact-icon">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#181717"/>
+              </svg>
+            </a>
           </div>
         </div>
+
       </aside>
 
       <!-- Main content -->
@@ -72,10 +56,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="cv-meta">
               University of Kansas Medical Center &mdash; June 2024 to Present
             </p>
-            <ul>
-              <li>Build and maintain pipelines for preprocessing and analysis of 'omic data</li>
-              <li>Collaborate across research teams on bioinformatics projects</li>
-            </ul>
           </div>
 
           <div class="cv-entry">
@@ -83,11 +63,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p class="cv-meta">
               University of Kansas Medical Center &mdash; August 2022 to May 2024
             </p>
-            <ul>
-              <li>Processed and analyzed bulk and single-cell RNA-sequencing data</li>
-              <li>Contributed to publications in peer-reviewed journals</li>
-              <li>Developed the micRoclean R package for microbiome decontamination</li>
-            </ul>
           </div>
         </section>
 
@@ -121,21 +96,172 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </section>
 
         <section class="cv-section">
-          <h2 class="cv-section-title">Publications &amp; Projects</h2>
+          <h2 class="cv-section-title">Publications</h2>
 
           <div class="pub-list">
             <div class="pub-card">
-              <span class="pub-status submitted">Submitted</span>
+              <span class="pub-status published">Published</span>
               <h3>
-                Therapeutic Potential of NRF2 activating drug RTA-408 in
-                suppressing T-cell effector responses and inflammatory bowel
+                Nrf2 Promotes Regulatory T Cell Differentiation by Reprogramming
+                Glutamine Metabolism and Alleviates Ulcerative Colitis
+              </h3>
+              <p class="pub-authors">
+                Dasgupta, D., Tripathi, A., Griffard-Smith, R., Dahabieh, M.S.,
+                Islam Saif, M.S., Roy, B.C., Burt, E., Ellis, A., Sheldon, R.D.,
+                Dhorajiya, P., Umar, S., Koestler, D.C., Jones, R.G., Pyaram, K.
+              </p>
+              <p class="pub-journal">Science Immunology</p>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                Distinguishing the significance of blood microbes in epithelial
+                ovarian cancer
+              </h3>
+              <p class="pub-authors">
+                Mahoney, D.E., Chalise, P., Pei, D., Griffard-Smith, R., Home, T.,
+                Pathak, H.B., Umar, S., Godwin, A.K.
+              </p>
+              <p class="pub-journal">Gut Microbes Reports, 2026</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.1080/29933935.2026.2623562"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status preprint">Preprint</span>
+              <h3>
+                Integrative modeling of read depth and B-allele frequency
+                improves single-cell copy number calling from targeted DNA
+                sequencing panels
+              </h3>
+              <p class="pub-authors">
+                Pei, D., Griffard-Smith, R., Urrego, B.C., Schueddig, E.
+              </p>
+              <p class="pub-journal">bioRxiv, March 2026</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.64898/2026.03.12.711292"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Preprint</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                Extracellular Vesicle miRNAs as Biomarkers of Asthma Severity
+              </h3>
+              <p class="pub-authors">
+                Prasad, C., Griffard, R., Pei, D., Haworth, S., Dhillon, N.K.,
+                Castro, M., Sundar, I.K.
+              </p>
+              <p class="pub-journal">Allergy, January 2026</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.1111/all.70079"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                Nrf2 drives activation-driven expansion of CD4+ T cells by
+                modulating glucose and glutamine metabolism
+              </h3>
+              <p class="pub-authors">
+                Tripathi, A., Dasgupta, D., Dahabieh, M.S., Griffard-Smith, R.,
+                Pant, A., Bugbee, A., Yellapu, N.K., Burt, E., Choi, B.H.Y.,
+                Ellis, A.E., Sheldon, R.D., Giri, S., Koestler, D., Jones, R.G.,
+                Yadav, V.N., Pyaram, K.
+              </p>
+              <p class="pub-journal">Cell Reports, September 2025</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.1016/j.celrep.2025.116177"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                Therapeutic potential of NRF2 activating drug RTA-408 in
+                suppressing T cell effector responses and inflammatory bowel
                 disease
               </h3>
               <p class="pub-authors">
                 Griffard-Smith, R., Dasgupta, D., Tripathi, A., Yellapu, N.K.,
                 Pyaram, K.
               </p>
-              <p class="pub-journal">Cell Reports</p>
+              <p class="pub-journal">The Journal of Immunology, August 2025</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.1093/jimmun/vkaf117"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                micRoclean: an R package for decontaminating low-biomass
+                16S-rRNA microbiome data
+              </h3>
+              <p class="pub-authors">
+                Griffard-Smith, R., Pei, D., Schueddig, E., Mahoney, D.,
+                Chalise, P., Koestler, D.
+              </p>
+              <p class="pub-journal">Frontiers in Bioinformatics, May 2025</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.3389/fbinf.2025.1556361"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+                <a
+                  href="https://github.com/rachelgriffard/micRoclean"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >GitHub</a>
+              </div>
+            </div>
+
+            <div class="pub-card">
+              <span class="pub-status published">Published</span>
+              <h3>
+                optima: an Open-source R Package for the Tapestri platform for
+                Integrative single cell Multi-omics data Analysis
+              </h3>
+              <p class="pub-journal">Bioinformatics, October 2023</p>
+              <div class="pub-links">
+                <a
+                  href="https://doi.org/10.1093/bioinformatics/btad611"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="pub-link"
+                >Paper</a>
+              </div>
             </div>
 
             <div class="pub-card">
@@ -150,31 +276,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
 
             <div class="pub-card">
-              <span class="pub-status published">Published</span>
+              <span class="pub-status in-prep">In Progress</span>
               <h3>
-                micRoclean: an R package for decontaminating low biomass
-                16S-rRNA microbiome data
+                Nextflow pipeline for 16S rRNA microbiome sequencing analysis
+                using the guild-based method
               </h3>
-              <p class="pub-authors">
-                Griffard-Smith, R., Pei, D., Schueddig, E., Mahoney, D.,
-                Chalise, P., Koestler, D.
-              </p>
-              <p class="pub-journal">Frontiers in Bioinformatics, 2025</p>
+              <p class="pub-authors">Griffard-Smith, R. et al.</p>
               <div class="pub-links">
                 <a
-                  href="https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2025.1556361/full"
+                  href="https://doi.org/10.1186/s13073-021-00840-y"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="pub-link"
-                >Paper</a>
-                <a
-                  href="https://github.com/rachelgriffard/micRoclean"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >GitHub</a>
+                >Guild Method</a>
               </div>
             </div>
+
+            <div class="pub-card">
+              <span class="pub-status in-prep">In Progress</span>
+              <h3>
+                Single-cell and bulk DNA-seq using Tapestri platform to identify
+                subclones in pig kidney cyst models
+              </h3>
+              <p class="pub-authors">Griffard-Smith, R. et al.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title">Presentations</h2>
+
+          <div class="cv-entry">
+            <h3>Introduction to Nextflow and nf-core</h3>
+            <p class="cv-meta">
+              Workshop &mdash; University of Kansas Medical Center, Department of Biostatistics &amp; Data Science, Kansas City, KS &mdash; March 2026
+            </p>
+          </div>
+
+          <div class="cv-entry">
+            <h3>micRoclean: an R package for decontaminating low biomass 16S-rRNA microbiome data</h3>
+            <p class="cv-meta">
+              Presentation &mdash; Innovations in Design, Analysis, and Dissemination, Olathe, KS &mdash; April 2024
+            </p>
+          </div>
+
+          <div class="cv-entry">
+            <h3>optima: an open-source R package for the Tapestri platform for integrative single cell multiomics data analysis</h3>
+            <p class="cv-meta">
+              Poster &mdash; Innovations in Design, Analysis, and Dissemination, Olathe, KS &mdash; April 2023
+            </p>
           </div>
         </section>
 
@@ -182,20 +332,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="cv-section-title">Professional Training</h2>
 
           <div class="cv-entry">
+            <h3>Multi Omics NETwork Analysis Workshop (MONET)</h3>
+            <p class="cv-meta">
+              University of Colorado Anschutz Medical Campus &mdash; June 2026
+            </p>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Nextflow Training Week</h3>
+            <p class="cv-meta">Seqera &mdash; November 2025</p>
+            <ul>
+              <li>Certificates: Hello Nextflow, Nextflow for Genomics, Hello nf-core, Nextflow for RNA-seq</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
             <h3>Single Cell RNA-seq Workshop</h3>
             <p class="cv-meta">
               National Center for Genome Resources / New Mexico-INBRE &mdash; November 2023
             </p>
-            <ul>
-              <li>
-                Hands-on work with SingleCellExperiment and Seurat within a
-                UNIX environment
-              </li>
-              <li>
-                Applied and expanded Unix and R knowledge for scRNA-seq
-                processing and analysis
-              </li>
-            </ul>
           </div>
 
           <div class="cv-entry">
@@ -221,6 +376,99 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="cv-entry">
             <h3>SQL for Data Science with R</h3>
             <p class="cv-meta">edX &mdash; 2021&ndash;2022</p>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title">Memberships &amp; Affiliations</h2>
+
+          <div class="cv-entry">
+            <h3>Nextflow Ambassador</h3>
+            <p class="cv-meta">Seqera &mdash; 2026 to Present</p>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Member, American Statistical Association</h3>
+            <p class="cv-meta">2022 to Present</p>
+            <ul>
+              <li>Section on Statistics in Genomics and Genetics</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Board Member, Graduate Student Biostatistics Association</h3>
+            <p class="cv-meta">University of Kansas Medical Center &mdash; 2022 to 2024</p>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2 class="cv-section-title">Skills &amp; Technology</h2>
+
+          <div class="cv-entry">
+            <h3>Transcriptomics</h3>
+            <ul>
+              <li>
+                <strong>Single-cell RNA-seq:</strong> Preprocessing and QC (Cell Ranger),
+                dimensionality reduction and differential expression (Seurat, scanpy),
+                pathway enrichment (GO, Reactome, Qiagen IPA)
+              </li>
+              <li>
+                <strong>Bulk RNA-seq:</strong> QC (FastQC, MultiQC), alignment (RSEM, Bowtie2),
+                dimensionality reduction (PCA, UMAP), differential expression and
+                pathway analysis (GO, Reactome, Qiagen IPA)
+              </li>
+              <li>
+                <strong>Spatial Transcriptomics:</strong> Visium HD (10x Genomics) - Spatial gene expression analysis,
+                tissue segmentation, spot-level and bin-level quantification,
+                integration with single-cell reference atlases
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Genomics</h3>
+            <ul>
+              <li>
+                <strong>Single-cell DNA-seq:</strong> Tapestri (MissionBio) - Preprocessing and QC (MissionBio Tapestri Insights),
+                subclone identification via dimensionality reduction, integration with
+                bulk DNA-seq for germline variant detection
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Epigenomics</h3>
+            <ul>
+              <li>
+                <strong>Reduced representation bisulfite sequencing:</strong> QC (FastQC), read trimming, genome preparation and
+                alignment (Bismark), differential methylation analysis (methylKit)
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Metagenomics</h3>
+            <ul>
+              <li>
+                <strong>16S rRNA-seq:</strong> QC (FastQC), adapter trimming (cutadapt),
+                denoising and ASV generation (DADA2), taxonomic profiling (QIIME2),
+                differential abundance testing (ANCOM-BC)
+              </li>
+              <li>
+                <strong>Metagenomic shotgun sequencing:</strong> QC, read trimming (Trimmomatic),
+                taxonomic profiling (MetaPhlAn), diversity analysis and visualization (phyloseq)
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Programming &amp; Infrastructure</h3>
+            <ul>
+              <li><strong>Languages:</strong> R, Python, Bash, SQL</li>
+              <li><strong>Workflow Management:</strong> Nextflow, Slurm</li>
+              <li><strong>Version Control:</strong> Git, GitHub</li>
+              <li><strong>Containers and Environments:</strong> Docker, Conda, Apptainer/Singularity</li>
+            </ul>
           </div>
         </section>
       </div>
