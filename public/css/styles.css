@@ -452,6 +452,26 @@ ul {
 }
 
 /* ===============================
+   PROJECT TYPE TAGS
+   =============================== */
+.project-type {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.project-type.workbook   { background: #cce5ff; color: #004085; }
+.project-type.r-package  { background: #d4edda; color: #155724; }
+.project-type.pipeline   { background: #fff3cd; color: #856404; }
+.project-type.analysis   { background: #f0e6ff; color: #4b2e83; }
+
+/* ===============================
    PROFILE BADGES (publications page)
    =============================== */
 .profile-badges {
@@ -941,6 +961,101 @@ ul {
   font-weight: 600;
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
+}
+
+/* Publication accordion */
+.pub-accordion {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green-500);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--ease);
+}
+
+.pub-accordion:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.pub-accordion[open] {
+  border-left-color: var(--green-700);
+}
+
+.pub-summary {
+  padding: 0.9rem 2.5rem 0.9rem 1.75rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  position: relative;
+  user-select: none;
+}
+
+.pub-summary::-webkit-details-marker { display: none; }
+.pub-summary::marker { display: none; }
+
+.pub-summary::after {
+  content: '›';
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-muted);
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform var(--ease);
+}
+
+.pub-accordion[open] .pub-summary::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.pub-summary h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--green-900);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pub-detail {
+  padding: 0.75rem 1.75rem 1.25rem;
+  border-top: 1px solid var(--green-100);
+}
+
+/* Relevant coursework */
+.cv-coursework-section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--green-100);
+}
+
+.cv-coursework-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cv-coursework-group {
+  margin-bottom: 0.85rem;
+}
+
+.cv-coursework-group:last-child {
+  margin-bottom: 0;
+}
+
+.cv-coursework-degree-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-body);
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
 /* ===============================

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Projects | Rachel Griffard-Smith"
+  description="Interactive notebooks, R packages, and pipelines by Rachel Griffard-Smith."
+>
+  <div class="container">
+    <div class="page-title">
+      <h1>Projects</h1>
+      <p>Interactive notebooks, R packages, and pipelines.</p>
+    </div>
+    <div class="post-grid">
+
+      <div class="post-card">
+        <span class="project-type workbook">Interactive Workbook</span>
+        <h3>Link Functions Workbook</h3>
+        <p>An interactive workbook exploring generalized linear model link functions — what they are, why they matter, and how to choose one.</p>
+        <a href="https://rachelgriffard.github.io/link-functions-workbook" target="_blank" rel="noopener noreferrer" class="read-more">View project &rarr;</a>
+      </div>
+
+      <div class="post-card">
+        <span class="project-type r-package">R Package</span>
+        <h3>micRoclean</h3>
+        <p>An R package for decontaminating low-biomass 16S rRNA microbiome data, accounting for reagent-kit and environmental contaminants.</p>
+        <a href="https://github.com/rachelgriffard/micRoclean" target="_blank" rel="noopener noreferrer" class="read-more">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="post-card">
+        <span class="project-type r-package">R Package</span>
+        <h3>optima</h3>
+        <p>An open-source R package for the Tapestri platform enabling integrative single-cell multi-omics data analysis.</p>
+        <a href="https://doi.org/10.1093/bioinformatics/btad611" target="_blank" rel="noopener noreferrer" class="read-more">View paper &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
