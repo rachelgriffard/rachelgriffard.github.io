@@ -41,6 +41,12 @@ const pathname = Astro.url.pathname;
           </li>
           <li>
             <a
+              href="/projects"
+              class:list={[{ active: pathname === "/projects" }]}
+            >Projects</a>
+          </li>
+          <li>
+            <a
               href="/about"
               class:list={[{ active: pathname === "/about" }]}
             >About</a>
@@ -78,6 +84,7 @@ const pathname = Astro.url.pathname;
         <ul class="footer-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/posts">Posts</a></li>
+          <li><a href="/projects">Projects</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/cv">CV</a></li>
         </ul>

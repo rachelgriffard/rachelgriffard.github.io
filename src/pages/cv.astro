@@ -93,213 +93,185 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </tr>
             </tbody>
           </table>
+
+          <div class="cv-coursework-section">
+            <p class="cv-coursework-label">Relevant Coursework</p>
+            <div class="cv-coursework-group">
+              <span class="cv-coursework-degree-tag">M.S. Health Data Science</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Linear Regression</span>
+                <span class="skill-tag">Categorical Data Analysis</span>
+                <span class="skill-tag">Introduction to Bioinformatics</span>
+                <span class="skill-tag">Survival Analysis</span>
+                <span class="skill-tag">Observational Health Data Analysis</span>
+                <span class="skill-tag">Statistical Methods in Genomic Research</span>
+                <span class="skill-tag">Data Visualization &amp; Acquisition</span>
+                <span class="skill-tag">Statistical Learning I &amp; II</span>
+                <span class="skill-tag">Clinical Trials</span>
+                <span class="skill-tag">Data Mining &amp; Analytics</span>
+              </div>
+            </div>
+            <div class="cv-coursework-group">
+              <span class="cv-coursework-degree-tag">B.S. Behavioral Neuroscience</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Calculus I &amp; II</span>
+                <span class="skill-tag">Introduction to Computing (C++)</span>
+                <span class="skill-tag">Statistics for Psychological Research</span>
+                <span class="skill-tag">Intermediate Statistics</span>
+                <span class="skill-tag">Statistical Methods in Behavioral &amp; Social Science Research</span>
+                <span class="skill-tag">Principles of Molecular &amp; Cellular Biology</span>
+                <span class="skill-tag">Principles of Genetics</span>
+                <span class="skill-tag">Research Methods</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="cv-section">
           <h2 class="cv-section-title">Publications</h2>
 
           <div class="pub-list">
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                Nrf2 Promotes Regulatory T Cell Differentiation by Reprogramming
-                Glutamine Metabolism and Alleviates Ulcerative Colitis
-              </h3>
-              <p class="pub-authors">
-                Dasgupta, D., Tripathi, A., Griffard-Smith, R., Dahabieh, M.S.,
-                Islam Saif, M.S., Roy, B.C., Burt, E., Ellis, A., Sheldon, R.D.,
-                Dhorajiya, P., Umar, S., Koestler, D.C., Jones, R.G., Pyaram, K.
-              </p>
-              <p class="pub-journal">Science Immunology</p>
-            </div>
-
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                Distinguishing the significance of blood microbes in epithelial
-                ovarian cancer
-              </h3>
-              <p class="pub-authors">
-                Mahoney, D.E., Chalise, P., Pei, D., Griffard-Smith, R., Home, T.,
-                Pathak, H.B., Umar, S., Godwin, A.K.
-              </p>
-              <p class="pub-journal">Gut Microbes Reports, 2026</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1080/29933935.2026.2623562"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>Nrf2 Promotes Regulatory T Cell Differentiation by Reprogramming Glutamine Metabolism and Alleviates Ulcerative Colitis</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Dasgupta, D., Tripathi, A., Griffard-Smith, R., Dahabieh, M.S., Islam Saif, M.S., Roy, B.C., Burt, E., Ellis, A., Sheldon, R.D., Dhorajiya, P., Umar, S., Koestler, D.C., Jones, R.G., Pyaram, K.</p>
+                <p class="pub-journal">Science Immunology</p>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status preprint">Preprint</span>
-              <h3>
-                Integrative modeling of read depth and B-allele frequency
-                improves single-cell copy number calling from targeted DNA
-                sequencing panels
-              </h3>
-              <p class="pub-authors">
-                Pei, D., Griffard-Smith, R., Urrego, B.C., Schueddig, E.
-              </p>
-              <p class="pub-journal">bioRxiv, March 2026</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.64898/2026.03.12.711292"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Preprint</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>Distinguishing the significance of blood microbes in epithelial ovarian cancer</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Mahoney, D.E., Chalise, P., Pei, D., Griffard-Smith, R., Home, T., Pathak, H.B., Umar, S., Godwin, A.K.</p>
+                <p class="pub-journal">Gut Microbes Reports, 2026</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1080/29933935.2026.2623562" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                Extracellular Vesicle miRNAs as Biomarkers of Asthma Severity
-              </h3>
-              <p class="pub-authors">
-                Prasad, C., Griffard, R., Pei, D., Haworth, S., Dhillon, N.K.,
-                Castro, M., Sundar, I.K.
-              </p>
-              <p class="pub-journal">Allergy, January 2026</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1111/all.70079"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status preprint">Preprint</span>
+                <h3>Integrative modeling of read depth and B-allele frequency improves single-cell copy number calling from targeted DNA sequencing panels</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Pei, D., Griffard-Smith, R., Urrego, B.C., Schueddig, E.</p>
+                <p class="pub-journal">bioRxiv, March 2026</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.64898/2026.03.12.711292" target="_blank" rel="noopener noreferrer" class="pub-link">Preprint</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                Nrf2 drives activation-driven expansion of CD4+ T cells by
-                modulating glucose and glutamine metabolism
-              </h3>
-              <p class="pub-authors">
-                Tripathi, A., Dasgupta, D., Dahabieh, M.S., Griffard-Smith, R.,
-                Pant, A., Bugbee, A., Yellapu, N.K., Burt, E., Choi, B.H.Y.,
-                Ellis, A.E., Sheldon, R.D., Giri, S., Koestler, D., Jones, R.G.,
-                Yadav, V.N., Pyaram, K.
-              </p>
-              <p class="pub-journal">Cell Reports, September 2025</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1016/j.celrep.2025.116177"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>Extracellular Vesicle miRNAs as Biomarkers of Asthma Severity</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Prasad, C., Griffard, R., Pei, D., Haworth, S., Dhillon, N.K., Castro, M., Sundar, I.K.</p>
+                <p class="pub-journal">Allergy, January 2026</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1111/all.70079" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                Therapeutic potential of NRF2 activating drug RTA-408 in
-                suppressing T cell effector responses and inflammatory bowel
-                disease
-              </h3>
-              <p class="pub-authors">
-                Griffard-Smith, R., Dasgupta, D., Tripathi, A., Yellapu, N.K.,
-                Pyaram, K.
-              </p>
-              <p class="pub-journal">The Journal of Immunology, August 2025</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1093/jimmun/vkaf117"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>Nrf2 drives activation-driven expansion of CD4+ T cells by modulating glucose and glutamine metabolism</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Tripathi, A., Dasgupta, D., Dahabieh, M.S., Griffard-Smith, R., Pant, A., Bugbee, A., Yellapu, N.K., Burt, E., Choi, B.H.Y., Ellis, A.E., Sheldon, R.D., Giri, S., Koestler, D., Jones, R.G., Yadav, V.N., Pyaram, K.</p>
+                <p class="pub-journal">Cell Reports, September 2025</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1016/j.celrep.2025.116177" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                micRoclean: an R package for decontaminating low-biomass
-                16S-rRNA microbiome data
-              </h3>
-              <p class="pub-authors">
-                Griffard-Smith, R., Pei, D., Schueddig, E., Mahoney, D.,
-                Chalise, P., Koestler, D.
-              </p>
-              <p class="pub-journal">Frontiers in Bioinformatics, May 2025</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.3389/fbinf.2025.1556361"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
-                <a
-                  href="https://github.com/rachelgriffard/micRoclean"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >GitHub</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>Therapeutic potential of NRF2 activating drug RTA-408 in suppressing T cell effector responses and inflammatory bowel disease</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R., Dasgupta, D., Tripathi, A., Yellapu, N.K., Pyaram, K.</p>
+                <p class="pub-journal">The Journal of Immunology, August 2025</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1093/jimmun/vkaf117" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status published">Published</span>
-              <h3>
-                optima: an Open-source R Package for the Tapestri platform for
-                Integrative single cell Multi-omics data Analysis
-              </h3>
-              <p class="pub-journal">Bioinformatics, October 2023</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1093/bioinformatics/btad611"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Paper</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>micRoclean: an R package for decontaminating low-biomass 16S-rRNA microbiome data</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R., Pei, D., Schueddig, E., Mahoney, D., Chalise, P., Koestler, D.</p>
+                <p class="pub-journal">Frontiers in Bioinformatics, May 2025</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.3389/fbinf.2025.1556361" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                  <a href="https://github.com/rachelgriffard/micRoclean" target="_blank" rel="noopener noreferrer" class="pub-link">GitHub</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status in-prep">In Progress</span>
-              <h3>
-                Fixed single-cell RNA sequencing analysis of mouse models of
-                asthma
-              </h3>
-              <p class="pub-authors">
-                Griffard-Smith, R., Sundar, I., Prasad, C.
-              </p>
-            </div>
-
-            <div class="pub-card">
-              <span class="pub-status in-prep">In Progress</span>
-              <h3>
-                Nextflow pipeline for 16S rRNA microbiome sequencing analysis
-                using the guild-based method
-              </h3>
-              <p class="pub-authors">Griffard-Smith, R. et al.</p>
-              <div class="pub-links">
-                <a
-                  href="https://doi.org/10.1186/s13073-021-00840-y"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="pub-link"
-                >Guild Method</a>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
+                <h3>optima: an Open-source R Package for the Tapestri platform for Integrative single cell Multi-omics data Analysis</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-journal">Bioinformatics, October 2023</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1093/bioinformatics/btad611" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
+                </div>
               </div>
-            </div>
+            </details>
 
-            <div class="pub-card">
-              <span class="pub-status in-prep">In Progress</span>
-              <h3>
-                Single-cell and bulk DNA-seq using Tapestri platform to identify
-                subclones in pig kidney cyst models
-              </h3>
-              <p class="pub-authors">Griffard-Smith, R. et al.</p>
-            </div>
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status in-prep">In Progress</span>
+                <h3>Fixed single-cell RNA sequencing analysis of mouse models of asthma</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R., Sundar, I., Prasad, C.</p>
+              </div>
+            </details>
+
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status in-prep">In Progress</span>
+                <h3>Nextflow pipeline for 16S rRNA microbiome sequencing analysis using the guild-based method</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R. et al.</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1186/s13073-021-00840-y" target="_blank" rel="noopener noreferrer" class="pub-link">Guild Method</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status in-prep">In Progress</span>
+                <h3>Single-cell and bulk DNA-seq using Tapestri platform to identify subclones in pig kidney cyst models</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R. et al.</p>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -458,6 +430,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <strong>Metagenomic shotgun sequencing:</strong> QC, read trimming (Trimmomatic),
                 taxonomic profiling (MetaPhlAn), diversity analysis and visualization (phyloseq)
               </li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Statistics &amp; Mathematics</h3>
+            <ul>
+              <li><strong>Regression:</strong> Linear regression, logistic regression, generalized linear models</li>
+              <li><strong>Survival Analysis:</strong> Kaplan-Meier estimation, Cox proportional hazards, competing risks</li>
+              <li><strong>Statistical Learning:</strong> Supervised and unsupervised machine learning, regularization (LASSO, ridge), random forests, dimensionality reduction</li>
+              <li><strong>Categorical Analysis:</strong> Chi-square tests, contingency tables, log-linear models, ordinal regression</li>
+              <li><strong>Clinical &amp; Observational Studies:</strong> Clinical trial design, propensity score methods, causal inference frameworks</li>
+              <li><strong>Genomic Statistics:</strong> Multiple testing correction (FDR, Bonferroni), differential expression analysis, genomic data methods</li>
+              <li><strong>Foundations:</strong> Calculus I &amp; II, probability theory</li>
             </ul>
           </div>
 
