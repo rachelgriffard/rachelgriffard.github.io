@@ -587,6 +587,33 @@ ul {
   margin-bottom: 1rem;
 }
 
+.about-education-section {
+  padding-bottom: 3rem;
+}
+
+.about-edu-entry {
+  margin-bottom: 2rem;
+}
+
+.about-edu-entry:last-child {
+  margin-bottom: 0;
+}
+
+.about-edu-degree {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  margin: 0 0 0.2rem;
+  color: var(--text-heading);
+}
+
+.about-edu-meta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  margin: 0 0 0.75rem;
+}
+
 .about-gallery-section {
   padding-bottom: 4rem;
 }
@@ -1024,38 +1051,28 @@ ul {
   border-top: 1px solid var(--green-100);
 }
 
-/* Relevant coursework */
-.cv-coursework-section {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--green-100);
+.cv-edu-entry {
+  margin-bottom: 1.75rem;
 }
 
-.cv-coursework-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-}
-
-.cv-coursework-group {
-  margin-bottom: 0.85rem;
-}
-
-.cv-coursework-group:last-child {
+.cv-edu-entry:last-child {
   margin-bottom: 0;
 }
 
-.cv-coursework-degree-tag {
+.cv-edu-degree {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.15rem;
+  color: var(--text-heading);
+}
+
+.cv-edu-meta {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-body);
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.65rem;
 }
 
 /* ===============================
