@@ -1,14 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostCard from '../components/PostCard.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
 ---
 
-<BaseLayout title="Rachel Griffard-Smith | Blog">
+<BaseLayout title="Rachel Griffard-Smith">
   <div class="container">
     <section class="hero">
       <h1>Rachel Griffard-Smith</h1>
@@ -18,20 +12,60 @@ const posts = (await getCollection('blog')).sort(
         collage, photography, and climbing big rocks.
       </p>
       <div class="hero-links">
-        <a href="/posts" class="btn btn-primary">Read Posts</a>
+        <a href="/cv" class="btn btn-primary">View CV</a>
         <a href="/about" class="btn btn-outline">About Me</a>
-        <a href="/cv" class="btn btn-outline">CV</a>
+        <a href="/posts" class="btn btn-outline">Posts</a>
       </div>
     </section>
 
     <section class="section">
       <div class="section-header">
-        <h2>Latest Posts</h2>
+        <h2>Highlights</h2>
         <div class="section-line"></div>
       </div>
-      <div class="post-grid">
-        {posts.slice(0, 6).map((post) => <PostCard post={post} />)}
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <h3>Role</h3>
+          <p>Bioinformatician I at KUMC, consulting across oncology, immunology, pulmonology, and microbiome research groups.</p>
+        </div>
+        <div class="highlight-card">
+          <h3>Publications</h3>
+          <p>Peer-reviewed publications in <em>Science Immunology</em>, <em>Cell Reports</em>, <em>Bioinformatics</em>, and more.</p>
+        </div>
+        <div class="highlight-card">
+          <h3>Open Source</h3>
+          <p>Developer of micRoclean and optima — R packages for microbiome decontamination and single-cell multi-omics analysis.</p>
+        </div>
       </div>
     </section>
   </div>
 </BaseLayout>
+
+<style>
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+  }
+
+  .highlight-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+  }
+
+  .highlight-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+</style>
