@@ -35,12 +35,6 @@ const pathname = Astro.url.pathname;
           </li>
           <li>
             <a
-              href="/posts"
-              class:list={[{ active: pathname.startsWith("/posts") }]}
-            >Posts</a>
-          </li>
-          <li>
-            <a
               href="/projects"
               class:list={[{ active: pathname === "/projects" }]}
             >Projects</a>
