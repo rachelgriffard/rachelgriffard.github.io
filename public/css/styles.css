@@ -973,6 +973,16 @@ ul {
   border-bottom: none;
 }
 
+.coursework-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
