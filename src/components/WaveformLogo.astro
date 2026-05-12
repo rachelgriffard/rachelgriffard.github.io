@@ -1,0 +1,62 @@
+---
+// WaveformLogo.astro — mouse-driven data signal nav brand
+---
+
+<a href="/" class="nav-brand wave-logo-link">
+  <svg
+    class="wave-icon"
+    viewBox="0 0 48 22"
+    width="48"
+    height="22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <clipPath id="wave-clip">
+        <rect x="0" y="0" width="48" height="22" />
+      </clipPath>
+    </defs>
+    <g clip-path="url(#wave-clip)">
+      <line x1="0" y1="11" x2="48" y2="11" stroke="#4a6b4e" stroke-width="0.6" opacity="0.5"/>
+      <path class="wave-path" stroke="#8fad8f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </svg>
+  <span>Rachel Griffard-Smith</span>
+</a>
+
+<style>
+  .wave-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+</style>
+
+<script>
+  const W   = 48;
+  const CY  = 11;
+  const AMP =  8;
+  const N   = 90;
+
+  const svg  = document.querySelector('.wave-icon')!;
+  const path = svg.querySelector('.wave-path') as SVGPathElement;
+
+  function draw(phase: number) {
+    let d = '';
+    for (let i = 0; i <= N; i++) {
+      const x = (i / N) * W;
+      const t = (i / N) * 4.5 * Math.PI + phase;
+      // three frequencies for a realistic data-signal look
+      const y = CY - AMP * (0.55 * Math.sin(t) + 0.3 * Math.sin(2.3 * t) + 0.15 * Math.sin(4.1 * t));
+      d += `${i === 0 ? 'M' : 'L'}${x.toFixed(2)},${y.toFixed(2)} `;
+    }
+    path.setAttribute('d', d.trim());
+  }
+
+  draw(0);
+
+  document.addEventListener('mousemove', (e) => {
+    draw((e.clientX / window.innerWidth) * 2 * Math.PI);
+  });
+</script>
