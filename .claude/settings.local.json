@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(node -e \"const p=require\\('s:/Biostats/BIO-STAT/Koestler Devin/Rachel Griffard/Blog/rachelgriffard.github.io/node_modules/astro/package.json'\\); console.log\\(JSON.stringify\\(p.exports['./content/runtime'], null, 2\\)\\)\")"
-    ]
-  }
-}
