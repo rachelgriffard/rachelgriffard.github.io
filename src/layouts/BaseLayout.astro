@@ -24,6 +24,16 @@ const pathname = Astro.url.pathname;
     <title>{title}</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="icon" href="/favicon.ico" />
+    <script>
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
   </head>
   <body>
     <nav class="site-nav">
@@ -49,6 +59,14 @@ const pathname = Astro.url.pathname;
             <a href="/cv" class:list={[{ active: pathname === "/cv" }]}>CV</a>
           </li>
         </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-13a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm0 16a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zM4.22 5.64a1 1 0 0 0 1.42-1.42L4.22 2.8a1 1 0 0 0-1.42 1.42l1.42 1.42zm15.56 12.72a1 1 0 0 0-1.42 1.42l1.42 1.42a1 1 0 0 0 1.42-1.42l-1.42-1.42zM1 11a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2H1zm20 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zM5.64 19.78a1 1 0 0 0-1.42 1.42l1.42 1.42a1 1 0 0 0 1.42-1.42l-1.42-1.42zm12.72-15.56a1 1 0 0 0 1.42 1.42l1.42-1.42a1 1 0 0 0-1.42-1.42l-1.42 1.42z"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
       </div>
     </nav>
 
@@ -107,5 +125,16 @@ const pathname = Astro.url.pathname;
         <p class="footer-copy">&copy; 2025 Rachel Griffard-Smith</p>
       </div>
     </footer>
+    <script>
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+          const next = isDark ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        });
+      }
+    </script>
   </body>
 </html>
