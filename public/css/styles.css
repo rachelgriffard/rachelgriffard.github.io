@@ -34,6 +34,32 @@
   --radius:      10px;
   --radius-lg:   16px;
   --ease:        0.2s ease;
+  --nav-bg:      rgba(21,28,20,0.95);
+  --text-heading: var(--green-900);
+}
+
+/* ===============================
+   LIGHT THEME
+   =============================== */
+[data-theme="light"] {
+  --bg:          #f4f1e8;
+  --bg-card:     #fefcf7;
+  --bg-mist:     #ece9de;
+  --green-900:   #1c2e1c;   /* dark forest — headings */
+  --green-700:   #3d6b42;   /* forest green — links / primary accent */
+  --green-500:   #5a8a5e;   /* sage — secondary accent */
+  --green-300:   #8fad8f;   /* light sage — subtle accents */
+  --green-100:   #cdd9cd;   /* pale green — borders / table rows */
+  --green-50:    #e3ede3;   /* palest tint — table headers / skill tag bg */
+  --text-dark:   #1c2e1c;
+  --text-body:   #3a4a3b;
+  --text-muted:  #6b7d6c;
+  --text-light:  #8a9e8c;
+  --border:      #c0d0c0;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 16px rgba(0,0,0,0.09);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,0.14);
+  --nav-bg:      rgba(244,241,232,0.95);
 }
 
 /* ===============================
@@ -84,7 +110,7 @@ ul {
    STICKY NAVIGATION
    =============================== */
 .site-nav {
-  background: rgba(21,28,20,0.95);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -140,6 +166,43 @@ ul {
   color: var(--green-700);
   border-bottom-color: var(--green-500);
 }
+
+/* ===============================
+   WAVEFORM LOGO COLORS
+   =============================== */
+.wave-icon line      { stroke: var(--green-300); opacity: 0.5; }
+.wave-icon .wave-path { stroke: var(--green-700); }
+
+/* ===============================
+   THEME TOGGLE
+   =============================== */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: background var(--ease), color var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-mist);
+  color: var(--green-700);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-moon { display: none; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="light"] .icon-moon { display: flex; }
 
 /* ===============================
    HOME HERO
@@ -462,8 +525,17 @@ ul {
 
 .project-type.workbook   { background: #162535; color: #6ab4d4; }
 .project-type.r-package  { background: #1a3320; color: #7ec98a; }
-.project-type.pipeline   { background: #302212; color: #c9974a; }
+.project-type.workshop   { background: #302212; color: #c9974a; }
 .project-type.analysis   { background: #251635; color: #a87cc4; }
+
+[data-theme="light"] .pub-status.published,
+[data-theme="light"] .project-type.r-package  { background: #d4ead8; color: #1a5226; }
+[data-theme="light"] .pub-status.submitted,
+[data-theme="light"] .project-type.workbook   { background: #cde0ee; color: #0d3f6b; }
+[data-theme="light"] .pub-status.preprint,
+[data-theme="light"] .project-type.workshop   { background: #f0dfc8; color: #7a4412; }
+[data-theme="light"] .pub-status.in-prep,
+[data-theme="light"] .project-type.analysis   { background: #e4d4ef; color: #421870; }
 
 /* ===============================
    PROFILE BADGES (publications page)
