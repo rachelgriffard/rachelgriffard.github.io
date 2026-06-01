@@ -537,6 +537,18 @@ ul {
 [data-theme="light"] .pub-status.in-prep,
 [data-theme="light"] .project-type.analysis   { background: #e4d4ef; color: #421870; }
 
+.project-org {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
 /* ===============================
    PROFILE BADGES (publications page)
    =============================== */
