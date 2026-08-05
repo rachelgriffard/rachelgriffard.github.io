@@ -132,12 +132,14 @@ ul {
 .nav-brand {
   display: flex;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  text-transform: uppercase;
   color: var(--green-900);
-  letter-spacing: 0.06em;
+}
+
+.nav-brand-name {
+  font-family: 'Qwitcher Grypen', cursive;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1;
 }
 
 .nav-brand:hover {
@@ -167,12 +169,6 @@ ul {
   color: var(--green-700);
   border-bottom-color: var(--green-500);
 }
-
-/* ===============================
-   WAVEFORM LOGO COLORS
-   =============================== */
-.wave-icon line      { stroke: var(--green-300); opacity: 0.5; }
-.wave-icon .wave-path { stroke: var(--green-700); }
 
 /* ===============================
    THEME TOGGLE
@@ -1414,8 +1410,8 @@ ul {
     font-size: 0.72rem;
   }
 
-  .nav-brand {
-    font-size: 1.05rem;
+  .nav-brand-name {
+    font-size: 1.4rem;
   }
 }
 
