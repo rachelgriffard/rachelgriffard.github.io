@@ -1,6 +1,4 @@
 ---
-import WaveformLogo from '../components/WaveformLogo.astro';
-
 interface Props {
   title: string;
   description?: string;
@@ -34,7 +32,9 @@ const pathname = Astro.url.pathname;
   <body>
     <nav class="site-nav">
       <div class="nav-inner">
-        <WaveformLogo />
+        <a href="/" class="nav-brand">
+          <span class="nav-brand-name">Rachel</span>
+        </a>
         <ul class="nav-links">
           <li>
             <a href="/" class:list={[{ active: pathname === "/" }]}>Home</a>
