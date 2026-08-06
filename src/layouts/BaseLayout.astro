@@ -32,36 +32,57 @@ const pathname = Astro.url.pathname;
   <body>
     <nav class="site-nav">
       <div class="nav-inner">
+        <div class="nav-menu-wrap">
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+          <div id="nav-menu" class="nav-menu">
+            <ul class="nav-links">
+              <li>
+                <a href="/" class:list={[{ active: pathname === "/" }]}>Home</a>
+              </li>
+              <li>
+                <a
+                  href="/projects"
+                  class:list={[{ active: pathname === "/projects" }]}
+                >Projects</a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  class:list={[{ active: pathname === "/about" }]}
+                >About</a>
+              </li>
+              <li>
+                <a href="/cv" class:list={[{ active: pathname === "/cv" }]}>CV</a>
+              </li>
+              <li>
+                <a
+                  href="https://rachelgriffard.github.io/portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Portfolio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <a href="/" class="nav-brand">
-          <span class="nav-brand-name">Rachel</span>
+          <h1 class="nav-brand-name">
+            <span class="signature-first">Rachel</span>
+            <span class="signature-last">Griffard-Smith</span>
+          </h1>
         </a>
-        <ul class="nav-links">
-          <li>
-            <a href="/" class:list={[{ active: pathname === "/" }]}>Home</a>
-          </li>
-          <li>
-            <a
-              href="/projects"
-              class:list={[{ active: pathname === "/projects" }]}
-            >Projects</a>
-          </li>
-          <li>
-            <a
-              href="/about"
-              class:list={[{ active: pathname === "/about" }]}
-            >About</a>
-          </li>
-          <li>
-            <a href="/cv" class:list={[{ active: pathname === "/cv" }]}>CV</a>
-          </li>
-          <li>
-            <a
-              href="https://rachelgriffard.github.io/portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Portfolio</a>
-          </li>
-        </ul>
+
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
           <svg class="icon-sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-13a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1zm0 16a1 1 0 0 0-1 1v2a1 1 0 0 0 2 0v-2a1 1 0 0 0-1-1zM4.22 5.64a1 1 0 0 0 1.42-1.42L4.22 2.8a1 1 0 0 0-1.42 1.42l1.42 1.42zm15.56 12.72a1 1 0 0 0-1.42 1.42l1.42 1.42a1 1 0 0 0 1.42-1.42l-1.42-1.42zM1 11a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2H1zm20 0a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zM5.64 19.78a1 1 0 0 0-1.42 1.42l1.42 1.42a1 1 0 0 0 1.42-1.42l-1.42-1.42zm12.72-15.56a1 1 0 0 0 1.42 1.42l1.42-1.42a1 1 0 0 0-1.42-1.42l-1.42 1.42z"/>
@@ -72,6 +93,7 @@ const pathname = Astro.url.pathname;
         </button>
       </div>
     </nav>
+    <div id="nav-backdrop" class="nav-backdrop"></div>
 
     <main>
       <div class="page-contact-bar">
@@ -138,6 +160,32 @@ const pathname = Astro.url.pathname;
           localStorage.setItem('theme', next);
         });
       }
+
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const navBackdrop = document.getElementById('nav-backdrop');
+
+      function closeNavMenu() {
+        navToggle?.setAttribute('aria-expanded', 'false');
+        navMenu?.classList.remove('open');
+        navBackdrop?.classList.remove('open');
+      }
+
+      function toggleNavMenu() {
+        const isOpen = navMenu?.classList.contains('open');
+        navToggle?.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        navMenu?.classList.toggle('open', !isOpen);
+        navBackdrop?.classList.toggle('open', !isOpen);
+      }
+
+      navToggle?.addEventListener('click', toggleNavMenu);
+      navBackdrop?.addEventListener('click', closeNavMenu);
+      navMenu?.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).tagName === 'A') closeNavMenu();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeNavMenu();
+      });
     </script>
   </body>
 </html>
