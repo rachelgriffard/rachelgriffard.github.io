@@ -1,18 +1,109 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    type: 'Workshop',
+    title: '2026 KUMC Microbiome Symposium Workshop',
+    description: 'Developed and delivered an interactive workshop and companion site for wet lab biologists with no prior data science background, translating complex analytical methods into accessible, hands-on learning materials.',
+    href: 'https://rachelgriffard.github.io/kumc-microbiome-symposium/',
+    linkText: 'View project',
+  },
+  {
+    type: 'Documentation',
+    title: 'KU HPC Internal Partition User Site',
+    description: 'Worked with small team to develop internal processes to reduce redundancy in content within on-premesis HPC system. Developed website to document shared tools and resources and assist new users with common processes.',
+    href: 'https://kumc-bioinformatics.github.io/',
+    linkText: 'View project',
+  },
+  {
+    type: 'Nextflow Pipeline',
+    title: 'Documentation for the 16Sguild Pipeline for 16S rRNA Data Analysis',
+    description: 'Collaboratively built documentation for the 16Sguild Nextflow pipeline I created for seamless analysis of multistep data in a reproducible manner, providing detailed instructions and examples for analyzing 16S rRNA sequencing data.',
+    href: 'https://zhao-microbiome-lab.github.io/16Sguild-docs/',
+    linkText: 'View docs',
+  },
+  {
+    type: 'Interactive Workbook',
+    title: 'Link Functions Workbook',
+    description: 'An interactive workbook exploring generalized linear model link functions: what they are, why they matter, and how to choose one.',
+    href: 'https://rachelgriffard.github.io/link-functions-workbook',
+    linkText: 'View project',
+  },
+  {
+    type: 'Webpage',
+    title: 'nf-core lore (nf-lore)',
+    description: "Created nf-core's community lore page during a global hackathon spanning hundreds of open-source contributors across six continents. Also led the first-ever Kansas City local hub at KUMC for the March 2026 hackathon, representing one of only four U.S. sites, bringing the international event to a local in-person community for the first time.",
+    href: 'https://nf-co.re/lore',
+    linkText: 'View page',
+  },
+  {
+    type: 'R Package',
+    title: 'micRoclean',
+    description: 'An R package for decontaminating low-biomass 16S rRNA microbiome data, accounting for reagent-kit and environmental contaminants.',
+    href: 'https://github.com/rachelgriffard/micRoclean',
+    linkText: 'View on GitHub',
+  },
+  {
+    type: 'R Package',
+    title: 'optima',
+    description: 'An open-source R package for the Tapestri platform enabling integrative single-cell multi-omics data analysis.',
+    href: 'https://doi.org/10.1093/bioinformatics/btad611',
+    linkText: 'View paper',
+  },
+];
+
+const photos = [
+  { src: '/images/penny.jpg', alt: 'Penny Lane' },
+  { src: '/images/duchess.jpg', alt: 'Duchess' },
+  { src: '/images/hobbes.jpg', alt: 'Hobbes' },
+  { src: '/images/rachel-and-jack.JPG', alt: 'Rachel and Jack' },
+  { src: '/images/climbing.gif.gif', alt: 'Rachel rock climbing' },
+];
 ---
 
 <BaseLayout title="Rachel Griffard-Smith">
-  <div class="container">
-    <section class="hero">
-      <p class="bio-short">
-        Bioinformatic Data Scientist at the University of Kansas Medical Center passionate about the democratization of data. Lover of
-        collage, photography, and climbing big (usually plastic) rocks.
-      </p>
-      <div class="hero-links">
-        <a href="/cv" class="btn btn-primary">View CV</a>
-        <a href="/about" class="btn btn-outline">About Me</a>
-      </div>
-    </section>
+  <section id="about" class="section">
+    <p class="role">Bioinformatic Data Scientist &middot; University of Kansas Medical Center</p>
+    <p>
+      I'm a data scientist, artist, and nature lover. When I'm not decoding
+      complex biology from large, heterogenous datasets with code and stats, I'm capturing moments through photography,
+      crafting collages, or bouldering.
+    </p>
+    <p>
+      I work at the University of Kansas Medical Center, where I emphasize reproducible science
+      by building pipelines and packages for a huge variety of data types and analyses
+      and contribute to published research through consulting across a variety of domain expertise.
+    </p>
+    <p>
+      I am most passionate about the democratization of data. I am committed to ensuring that knowledge from data
+      is not lost in poor visualizations, inaccessible code, or choppy writing; I strive to
+      take complex findings in biological data and making them accessible to not only a broad audience
+      of data experts, but also to those without domain experience. I find true passion in being able to explain complex
+      insights from data in a way that is clear, engaging, and actionable for a wide variety of audiences.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <ul class="item-list">
+      {projects.map((p) => (
+        <li class="item">
+          <p class="item-label">{p.type}</p>
+          <h3>{p.title}</h3>
+          <p>{p.description}</p>
+          <a href={p.href} target="_blank" rel="noopener noreferrer" class="item-link">{p.linkText} &rarr;</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section section-wide">
+    <h2 class="section-title">Life Outside the Office</h2>
+    <div class="gallery">
+      {photos.map((photo) => (
+        <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+      ))}
     </div>
-    </BaseLayout>
+  </section>
+</BaseLayout>

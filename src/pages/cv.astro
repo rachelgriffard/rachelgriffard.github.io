@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -9,36 +8,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <div class="container">
     <div class="cv-layout">
-      <!-- Sidebar -->
-      <aside class="cv-sidebar">
-        <Image
-          src="https://github.com/rachelgriffard/digital-cv/assets/95938614/787b7baf-c4f6-48bc-9b11-18b10ea2bbe5"
-          alt="Rachel Griffard-Smith"
-          class="avatar"
-          height=300
-          width=300
-        />
-        <h2>Rachel Griffard-Smith</h2>
-        <p class="cv-role">Bioinformatic Data Scientist</p>
 
-      </aside>
-
-      <!-- Main content -->
       <div class="cv-main">
         <section class="cv-section">
           <h2 class="cv-section-title">Experience</h2>
 
           <div class="cv-entry">
             <h3>Bioinformatic Data Scientist</h3>
-            <p class="cv-meta">
-              University of Kansas Medical Center &mdash; June 2024 to Present
-            </p>
+            <p class="cv-meta">University of Kansas Medical Center &middot; June 2024 to Present</p>
+            <ul class="cv-roles">
+              <li>Bioinformatician II &mdash; July 2026 to Present</li>
+              <li>Bioinformatician I &mdash; June 2024 to July 2026</li>
+            </ul>
             <ul>
               <li>Consult across six concurrent research teams, scoping analytical approaches to experimental designs and delivering fully reproducible analyses and pipelines tailored to each team's unique research questions.</li>
               <li>Apply a breadth of methods including GLMs, survival analysis, regularized regression, random forests, and dimensionality reduction across large, complex datasets on on-premises HPC infrastructure (Slurm).</li>
               <li>Translate complex analytical findings into clear, actionable conclusions for collaborators with varied quantitative backgrounds, including written reports and presentations tailored to non-technical audiences.</li>
               <li>Develop interactive dashboards (R Shiny, Quarto) enabling others to explore and interrogate analytical results directly, communicating deep insights to non-technical stakeholders.</li>
               <li>Serve as a Nextflow Ambassador and nf-core Outreach Team member, contributing to a globally distributed open-source community spanning hundreds of institutions and research groups worldwide and leading internal training sessions to drive adoption of scalable workflow tooling.</li>
+              <li>Mentor students on collaborative research projects, with five students mentored to date.</li>
             </ul>
             <p class="coursework-label">Relevant coursework</p>
             <div class="skill-tags">
@@ -49,9 +37,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <div class="cv-entry">
             <h3>Graduate Research Assistant</h3>
-            <p class="cv-meta">
-              University of Kansas Medical Center &mdash; August 2022 to May 2024
-            </p>
+            <p class="cv-meta">University of Kansas Medical Center &middot; August 2022 to May 2024</p>
             <ul>
               <li>Partnered with wet-lab scientists to define statistical frameworks for novel experimental designs, bridging domain biology and quantitative methodology</li>
               <li>Developed open-source tools addressing gaps identified through cross-group collaboration, including micRoclean and optima</li>
@@ -188,6 +174,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="cv-section-title">Presentations</h2>
 
           <div class="cv-entry">
+            <h3>The Microbial City: An Introduction to Microbiome Data Analysis</h3>
+            <p class="cv-meta">
+              Invited Presentation &mdash; University of Kansas Cancer Center Seminar Series, Kansas City, KS &mdash; November 2026
+            </p>
+          </div>
+
+          <div class="cv-entry">
             <h3>Introduction to Nextflow and nf-core</h3>
             <p class="cv-meta">
               Workshop &mdash; University of Kansas Medical Center, Department of Biostatistics &amp; Data Science, Kansas City, KS &mdash; March 2026
@@ -269,6 +262,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div class="cv-entry">
+            <h3><a href="https://nf-co.re" target="_blank" rel="noopener noreferrer">nf-core</a> Outreach Team Member</h3>
+            <p class="cv-meta">2026 to Present</p>
+          </div>
+
+          <div class="cv-entry">
             <h3>Member, American Statistical Association</h3>
             <p class="cv-meta">2022 to Present</p>
             <ul>
@@ -313,13 +311,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <details class="pub-accordion">
               <summary class="pub-summary">
-                <span class="pub-status preprint">Preprint</span>
+                <span class="pub-status abstract">Abstract</span>
+                <h3>Mo1484: Antioxidation Protein NRF2 Alleviates Colitis by Enhancing Treg Cell Functions</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Dasgupta, D., Tripathi, A., Dahabieh, M.S., Griffard-Smith, R., Saif, M.S.I., Roy, B., Ellis, A., Sheldon, R., Burt, E., Dhorajiya, P., Umar, S., Koestler, D., Jones, R., Pyaram, K.</p>
+                <p class="pub-journal">Gastroenterology, May 2026</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1016/s0016-5085(26)02923-9" target="_blank" rel="noopener noreferrer" class="pub-link">Abstract</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status published">Published</span>
                 <h3>Integrative modeling of read depth and B-allele frequency improves single-cell copy number calling from targeted DNA sequencing panels</h3>
               </summary>
               <div class="pub-detail">
-                <p class="pub-authors">Pei, D., Griffard-Smith, R., Urrego, B.C., Schueddig, E.</p>
-                <p class="pub-journal">bioRxiv, March 2026</p>
+                <p class="pub-authors">Pei, D., Griffard-Smith, R., Cano Urrego, B., Schueddig, E.</p>
+                <p class="pub-journal">Computational and Structural Biotechnology Journal, March 2026</p>
                 <div class="pub-links">
+                  <a href="https://doi.org/10.34133/csbj.0203" target="_blank" rel="noopener noreferrer" class="pub-link">Paper</a>
                   <a href="https://doi.org/10.64898/2026.03.12.711292" target="_blank" rel="noopener noreferrer" class="pub-link">Preprint</a>
                 </div>
               </div>
@@ -398,6 +411,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <details class="pub-accordion">
               <summary class="pub-summary">
                 <span class="pub-status in-prep">In Progress</span>
+                <h3>Nextflow pipeline for metagenomic sequencing analysis using the guild-based method</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R.</p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1186/s13073-021-00840-y" target="_blank" rel="noopener noreferrer" class="pub-link">Guild Method</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status in-prep">In Progress</span>
+                <h3>Visium HD spatial transcriptomics analysis of 12 samples from a mouse kidney model</h3>
+              </summary>
+              <div class="pub-detail">
+                <p class="pub-authors">Griffard-Smith, R.</p>
+              </div>
+            </details>
+
+            <details class="pub-accordion">
+              <summary class="pub-summary">
+                <span class="pub-status in-prep">In Progress</span>
                 <h3>Fixed single-cell RNA sequencing analysis of mouse models of asthma</h3>
               </summary>
               <div class="pub-detail">
@@ -411,7 +447,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h3>Nextflow pipeline for 16S rRNA microbiome sequencing analysis using the guild-based method</h3>
               </summary>
               <div class="pub-detail">
-                <p class="pub-authors">Griffard-Smith, R. et al.</p>
+                <p class="pub-authors">Griffard-Smith, R.</p>
                 <div class="pub-links">
                   <a href="https://doi.org/10.1186/s13073-021-00840-y" target="_blank" rel="noopener noreferrer" class="pub-link">Guild Method</a>
                 </div>
@@ -424,7 +460,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <h3>Single-cell and bulk DNA-seq using Tapestri platform to identify subclones in pig kidney cyst models</h3>
               </summary>
               <div class="pub-detail">
-                <p class="pub-authors">Griffard-Smith, R. et al.</p>
+                <p class="pub-authors">Griffard-Smith, R.</p>
               </div>
             </details>
           </div>

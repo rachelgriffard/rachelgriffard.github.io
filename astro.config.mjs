@@ -16,6 +16,11 @@ const fixUncPaths = {
 export default defineConfig({
   site: 'https://rachelgriffard.github.io',
   integrations: [mdx()],
+  // About and Projects now live on the home page; keep old links working.
+  redirects: {
+    '/about': '/#about',
+    '/projects': '/#projects',
+  },
   vite: {
     plugins: [fixUncPaths],
     resolve: {
